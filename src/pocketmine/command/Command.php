@@ -127,7 +127,7 @@ abstract class Command{
 		}
 
 		if($this->permissionMessage === null){
-			$message = $target->getServer()->getAdvancedProperty("messages.command-permissions", "You don't have permissions to use this command.");
+			$message = $target->getServer()->getAdvancedProperty("messages.command-permissions", "§d(!) §fError, no perms set to use this command!");
 			if(is_string($message) and strlen($message) > 0){
 				$target->sendMessage(TextFormat::RED . $message);
 			}
